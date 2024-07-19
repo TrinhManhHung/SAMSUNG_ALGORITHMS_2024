@@ -1,3 +1,5 @@
+// TẦN SUẤT LẺ
+
 #include<bits/stdc++.h>
 using namespace std;
 
