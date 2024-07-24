@@ -1,4 +1,4 @@
-//So fibonacci thu n
+//SỐ FIBONACCI THỨ N
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,4 +1,4 @@
-//Hoan vi nguoc
+//HOÁN VỊ NGƯỢC
 #include<bits/stdc++.h>
 using namespace std;
 #define pb push_back

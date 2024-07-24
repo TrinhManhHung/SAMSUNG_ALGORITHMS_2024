@@ -1,4 +1,4 @@
-//Gap doi day so
+//GẤP ĐÔI DÃY SỐ
 
 #include <bits/stdc++.h>
 using namespace std;

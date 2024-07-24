@@ -1,4 +1,4 @@
-//Luy thua ma tran
+//LŨY THỪA MA TRẬN
 
 #include <bits/stdc++.h>
 using namespace std;

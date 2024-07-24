@@ -1,4 +1,4 @@
-//Liet ke dinh tru
+//LIỆT KÊ ĐỈNH TRỤ
 
 #include<bits/stdc++.h>
 using namespace std;

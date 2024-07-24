@@ -1,4 +1,4 @@
-//To hop so co tong bang x
+//TỔ HỢP SỐ CÓ TỔNG BẰNG N
 #include<bits/stdc++.h>
 using namespace std;
 #define fi first

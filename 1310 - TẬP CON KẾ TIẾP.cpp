@@ -1,4 +1,4 @@
-//Tap con ke tiep
+//TẬP CON KẾ TIẾP
 #include<bits/stdc++.h>
 using namespace std;
 

@@ -1,4 +1,4 @@
-//Xau nhi phan truoc
+//XÂU NHỊ PHÂN TRƯỚC
 #include<bits/stdc++.h>
 using namespace std;
 

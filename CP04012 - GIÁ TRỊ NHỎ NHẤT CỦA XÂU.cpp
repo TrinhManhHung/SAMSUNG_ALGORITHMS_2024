@@ -1,6 +1,5 @@
 // GIÁ TRỊ NHỎ NHẤT CỦA XÂU
 
-// ĐẢO DẤU
 
 #include<bits/stdc++.h>
 using namespace std;

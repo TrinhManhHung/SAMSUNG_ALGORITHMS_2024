@@ -1,4 +1,4 @@
-//Phan tich so
+//PHÂN TÍCH SỐ
 #include<bits/stdc++.h>
 using namespace std;
 #define pb push_back

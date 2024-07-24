@@ -1,4 +1,4 @@
-//Tap con lien ke phia truoc
+//TẬP CON LIỀN KỀ PHÍA TRƯỚC
 #include<bits/stdc++.h>
 using namespace std;
 

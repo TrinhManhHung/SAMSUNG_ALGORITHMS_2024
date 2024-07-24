@@ -1,4 +1,4 @@
-//Xau nhi phan ke tiep
+//XÂU NHỊ PHÂN KẾ TIẾP
 
 #include<bits/stdc++.h>
 using namespace std;

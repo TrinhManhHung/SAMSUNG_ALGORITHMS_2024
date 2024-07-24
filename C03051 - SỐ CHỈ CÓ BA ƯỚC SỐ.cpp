@@ -1,4 +1,4 @@
-//So chi co ba uoc so
+//SỐ CHỈ CÓ BA ƯỚC SỐ
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long

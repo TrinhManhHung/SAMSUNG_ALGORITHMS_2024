@@ -1,7 +1,5 @@
 // SỐ ĐỨNG ĐẦU
 
-// DÃY CON LIÊN TIẾP
-
 #include<bits/stdc++.h>
 using namespace std;
 

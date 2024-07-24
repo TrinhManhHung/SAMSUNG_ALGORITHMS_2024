@@ -1,4 +1,4 @@
-//Doi cho cac chu so
+//ĐỔI CHỖ CÁC CHỮ SỐ
 #include<bits/stdc++.h>
 using namespace std;
 

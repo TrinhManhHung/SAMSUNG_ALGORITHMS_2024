@@ -1,3 +1,4 @@
+// SỐ NHỎ NHẤT
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long

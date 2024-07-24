@@ -1,7 +1,5 @@
 // TỔNG BÌNH PHƯƠNG
 
-// TỔNG BÌNH PHƯƠNG
-
 #include<bits/stdc++.h>
 using namespace std;
 int f[10005];

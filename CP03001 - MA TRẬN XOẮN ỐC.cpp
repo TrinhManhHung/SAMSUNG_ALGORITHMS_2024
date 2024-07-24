@@ -1,4 +1,4 @@
-//Ma tran xoan oc
+//MA TRẬN XOẮN ỐC
 #include<bits/stdc++.h>
 using namespace std;
 

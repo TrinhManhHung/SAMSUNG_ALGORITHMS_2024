@@ -1,4 +1,4 @@
-//Gia tri nho nhat cua xau
+//GIÁ TRỊ NHỎ NHẤT CỦA XÂU
 
 #include<bits/stdc++.h>
 using namespace std;
