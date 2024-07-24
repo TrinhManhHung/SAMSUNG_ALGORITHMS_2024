@@ -1,4 +1,4 @@
-//DIJKSTRA đồ thị vô hướng
+//DIJKSTRA ĐỒ THỊ VÔ HƯỚNG
 
 #include<bits/stdc++.h>
 using namespace std;
