@@ -85,6 +85,7 @@ void solve(){
 		}
 	}
 	
+	
 	ans /= 2;
 	cout << ans << endl;
 }
