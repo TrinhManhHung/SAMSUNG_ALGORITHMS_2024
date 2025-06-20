@@ -29,5 +29,6 @@ public class CP03021_ChuSo0 {
             System.out.println(ans);
             test--;
         }
+        sc.close();
     }
 }
