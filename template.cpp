@@ -199,8 +199,9 @@ void prepare(){
 	pw[0] = 1;
 	FOR(i, 1, maxn) pw[i] = pw[i-1] * BASE % MOD;
 	
+	invPw[maxn] = powMod(pw[maxn], MOD-2);
 	FOR(i, 0, maxn){
-		invPw[i] = powMod(pw[i], MOD - 2);
+		invPw[i-1] = invPw[i] * BASE % MOD;
 	}
 }
 
@@ -317,6 +318,131 @@ void kahn(){
 			in_degree[v]--;
 			if(!in_degree[v]) Q.push(v);
 		}
+	}
+}
+
+//Liet ke canh cau
+int n, m;
+vi adj[maxn+5];
+int num[maxn+5], low[maxn+5]; //low[v]: chi so cua dinh nho nhat co canh noi den cay con cua v
+int cnt, cntBridge;
+
+void DFS(int u, int parent){
+    low[u] = n+1; //duong vo cuc
+    num[u] = ++cnt;
+
+    for(int v : adj[u]){
+        if(v == parent) continue;
+
+        if(!num[v]){
+            DFS(v, u);
+
+            if(low[v] > num[u]){
+                cntBridge++;
+            }
+
+            low[u] = min(low[u], low[v]);
+        } else{
+            low[u] = min(low[u], num[v]);
+        }
+    }
+}
+
+//Tim LCA
+const ll MOD = 1e9 + 7;
+const int maxn = 70000;
+const int LOG = 18;
+
+int n, q;
+int par[maxn+5][LOG+5]; //parent[v][p]: cha thu 2^p cua dinh v
+int depth[maxn+5];
+vvi adj;
+bool used[maxn+5];
+
+void DFS(int u){
+    used[u] = true;
+    for(auto v : adj[u]){
+        if(!used[v]){
+            par[v][0] = u;
+            depth[v] = depth[u] + 1;
+            DFS(v);
+        }
+    }
+}
+
+void prepare(){
+     FOR(p, 1, LOG){
+        FOR(v, 1, n){
+            par[v][p] = par[par[v][p-1]][p-1];
+        }
+     }
+}
+
+//depth[u] > depth[v]
+int lca(int u, int v){
+    if(depth[u] < depth[v]) return lca(v, u);
+
+    //can bang do sau
+    FOD(p, LOG, 0){
+        if(depth[par[u][p]] >= depth[v]) u = par[u][p];
+    }
+
+    if(u == v) return u;
+    //tim nut cha
+    FOD(p, LOG, 0){
+        if(par[u][p] != par[v][p]){
+            u = par[u][p];
+            v = par[v][p];
+        }
+    }
+
+    return par[u][0];
+}
+
+
+//Nhan Ma tran
+const int MAXSZ = 25;
+
+struct Matrix{
+    int n, m;
+    ll d[MAXSZ+5][MAXSZ+5];
+
+    Matrix(int _n = 0, int _m = 0){
+        n = _n, m = _m;
+        memset(d, 0, sizeof(d));
+    }
+
+    Matrix operator * (const Matrix o) const{
+        int x = n, y = m, z = o.m;
+        Matrix res(x, z);
+
+        FOR(i, 0, x-1) FOR(j, 0, z-1)
+            FOR(k, 0, m-1){
+                res.d[i][j] += d[i][k] * o.d[k][j];
+                res.d[i][j] %= MOD;
+            }
+        return res;
+    }
+};
+
+Matrix powMod(Matrix o, ll p){
+    Matrix res(o.n, o.m);
+    FOR(i, 0, o.n-1) res.d[i][i] = 1;
+
+    if(p == 0){
+        return res;
+    }
+    
+    Matrix half = powMod(o, p / 2);
+    res = half * half;
+    if(p & 1) res = res * o;
+    return res;
+}
+
+//Liet Ke Nhanh Cac Tap Hop Con Cua Mask Theo Thu Tu Giam Dan
+void listAllSubset(int mask){
+	for(int sub = mask; sub >= 0; sub--){
+		sub &= mask;
 	}
 }
 
